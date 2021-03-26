@@ -11,8 +11,7 @@ table_str = ["Company", "Origin", "REF", "ReviewDate", "CocoaPercent", "CompanyL
              "BroadBeanOrigin"]
 table = [[], [], [], [], [], [], [], [], []]
 for i, clas in enumerate(table_str):
-    # через select вибираємо рядки які містять як class значення задане в даному випадку змінною clas
-    # та крапка перед фігурними дужками необхідна вона означає, що шукаємо свме в class
+    
     for line in soup.select(".{}".format(clas)):
         # доюавляємо до таблиці значення тексту закріпленого за class знайденого в попередньому рядку
             table[i].append(line.text)
